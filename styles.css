@@ -99,6 +99,11 @@ p {
   height: 50px;
   border-radius: 5px;
   box-shadow: 0px 5px 3px hsl(154, 59%, 40%);
+  cursor: pointer;
+}
+
+#trial-button:hover {
+  opacity: 0.7;
 }
 
 #trial-form p {
@@ -111,4 +116,24 @@ p {
 #trial-form span {
   color: var(--color-primary-red);
   font-weight: 700;
+}
+
+.error-msg {
+  position: relative;
+  display: none;
+}
+
+#trial-form .error-msg p {
+  color: var(--color-primary-red);
+  padding: 0;
+  position: absolute;
+  right: 0;
+  top: -10px;
+  font-style: italic;
+}
+
+.error-icon {
+  position: absolute;
+  top: -47px;
+  right: 25px;
 }

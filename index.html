@@ -23,9 +23,25 @@
 </div>
 <form id="trial-form">
   <input type="text" id="fname" placeholder="First Name">
+  <div class="error-msg">
+    <p class="error-text">First name cannot be empty</p>
+    <img class="error-icon" src="images/icon-error.svg" alt="">
+  </div>
   <input type="text" id="lname" placeholder="Last Name ">
+   <div class="error-msg">
+    <p class="error-text">Last name cannot be empty</p>
+    <img class="error-icon" src="images/icon-error.svg" alt="">
+  </div>
   <input type="email" id="email" placeholder="Email Address">
+   <div class="error-msg">
+    <p class="error-text">Looks like this is not an email</p>
+    <img class="error-icon" src="images/icon-error.svg" alt="">
+  </div>
   <input type="password" id="password" placeholder="Password">
+  <div class="error-msg">
+    <p class="error-text">Password cannot be empty</p>
+    <img class="error-icon" src="images/icon-error.svg" alt="">
+  </div>
   <button id="trial-button" type="submit">Claim your free trial </button>
   <p>By clicking the button, you are agreeing to our <span>Terms and Services</span></p>
    </form>
@@ -36,5 +52,6 @@
       Coded by <a href="https://www.frontendmentor.io/profile/hannahvw">Hannah Van Wyk</a>.
     </p>
   </footer>
+  <script src="main.js"></script>
 </body>
 </html>
