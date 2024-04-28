@@ -143,14 +143,18 @@ p {
   .attribution {
     display: none;
   }
+  body {
+    background-color: var(--color-primary-red);
+    background-image: url(images/bg-intro-desktop.png);
+  }
 
   .container {
-    min-width: 100%;
+    min-width: 75vw;
     height: 100vh;
-    background-image: url(images/bg-intro-desktop.png);
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
+    gap: 20px;
     padding-top: 100px;
   }
 
@@ -158,8 +162,10 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     text-align: left;
     max-width: 450px;
+    margin-left: 25px;
   }
 
   .title {
