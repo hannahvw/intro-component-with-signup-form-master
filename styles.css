@@ -33,11 +33,11 @@ body {
   align-items: center;
   justify-content: center;
   width: 100vw;
+  background-color: var(--color-primary-red);
+  background-image: url(images/bg-intro-mobile.png);
 }
 
 .container {
-  background-color: var(--color-primary-red);
-  background-image: url(images/bg-intro-mobile.png);
   color: #fff;
   max-width: 375px;
   padding: 50px 25px 30px;
