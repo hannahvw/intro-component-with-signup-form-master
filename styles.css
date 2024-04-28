@@ -119,12 +119,18 @@ p {
   font-weight: 700;
 }
 
-.error-msg {
+.error-msg-fname,
+.error-msg-lname,
+.error-msg-email,
+.error-msg-password {
   position: relative;
   display: none;
 }
 
-#trial-form .error-msg p {
+#trial-form .error-msg-fname p,
+#trial-form .error-msg-lname p,
+#trial-form .error-msg-email p,
+#trial-form .error-msg-password p {
   color: var(--color-primary-red);
   padding: 0;
   position: absolute;
@@ -133,7 +139,10 @@ p {
   font-style: italic;
 }
 
-.error-icon {
+.error-msg-fname .error-icon,
+.error-msg-lname .error-icon,
+.error-msg-email .error-icon,
+.error-msg-password .error-icon {
   position: absolute;
   top: -47px;
   right: 25px;

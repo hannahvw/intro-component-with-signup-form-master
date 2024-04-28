@@ -4,24 +4,49 @@ const firstName = document.querySelector("#fname");
 const lastName = document.querySelector("#lname");
 const email = document.querySelector("#email");
 const password = document.querySelector("#password");
-const errorMsg = document.querySelector(".error-msg");
+const errorMsgFirstName = document.querySelector(".error-msg-fname");
+const errorMsgLastName = document.querySelector(".error-msg-lname");
+const errorMsgEmail = document.querySelector(".error-msg-email");
+const errorMsgPassword = document.querySelector(".error-msg-password");
 
 function handleSubmit(event) {
   event.preventDefault();
   if (firstName.value === "") {
     lastName.style.marginTop = "35px";
-    errorMsg.style.display = "block";
+    errorMsgFirstName.style.display = "block";
   } else {
-    errorMsg.style.display = "none";
+    errorMsgFirstName.style.display = "none";
+    lastName.style.marginTop = "10px";
   }
 
   if (lastName.value === "") {
     email.style.marginTop = "35px";
-    errorMsg.style.display = "block";
+    errorMsgLastName.style.display = "block";
+  } else {
+    errorMsgLastName.style.display = "none";
+    email.style.marginTop = "10px";
   }
 
-  // password.style.marginTop = "35px";
-  // trialBtn.style.marginTop = "35px";
+  if (email.value === "" || !email.value.includes("@")) {
+    password.style.marginTop = "35px";
+    errorMsgEmail.style.display = "block";
+  } else {
+    errorMsgEmail.style.display = "none";
+    password.style.marginTop = "10px";
+  }
+
+  if (password.value === "") {
+    trialBtn.style.marginTop = "35px";
+    errorMsgPassword.style.display = "block";
+  } else {
+    errorMsgPassword.style.display = "none";
+    trialBtn.style.marginTop = "10px";
+  }
+
+  firstName.value = "";
+  lastName.value = "";
+  email.value = "";
+  password.value = "";
 }
 
 trialBtn.addEventListener("click", handleSubmit);
